@@ -6,7 +6,6 @@ now_dir = os.getcwd()
 sys.path.append(now_dir)
 load_dotenv()
 from infer.modules.vc.modules import VC
-from infer.modules.uvr5.modules import uvr
 from infer.lib.train.process_ckpt import (
     change_info,
     extract_small_model,
@@ -41,7 +40,6 @@ logger = logging.getLogger(__name__)
 tmp = os.path.join(now_dir, "TEMP")
 shutil.rmtree(tmp, ignore_errors=True)
 shutil.rmtree("%s/runtime/Lib/site-packages/infer_pack" % (now_dir), ignore_errors=True)
-shutil.rmtree("%s/runtime/Lib/site-packages/uvr5_pack" % (now_dir), ignore_errors=True)
 os.makedirs(tmp, exist_ok=True)
 os.makedirs(os.path.join(now_dir, "logs"), exist_ok=True)
 os.makedirs(os.path.join(now_dir, "assets/weights"), exist_ok=True)
@@ -152,10 +150,6 @@ def lookup_indices(index_root):
 
 lookup_indices(index_root)
 lookup_indices(outside_index_root)
-uvr5_names = []
-for name in os.listdir(weight_uvr5_root):
-    if name.endswith(".pth") or "onnx" in name:
-        uvr5_names.append(name.replace(".pth", ""))
 
 
 def change_choices():
