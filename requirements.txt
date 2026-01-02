@@ -16,12 +16,11 @@ torchvision>=0.18.1
 torchaudio>=2.3.1
 dotenv
 torchcodec>=0.8.1
-
+av
 faiss-cpu==1.7.3; python_version < "3.12"
 faiss-cpu>=1.7.3; python_version >= "3.12"
 
 # Machine learning, NLP and deep learning
-transformers>=4.49.0
 scikit-learn
 einops>=0.8.0
 git+https://github.com/terastudio-org/fairseq.git
@@ -40,13 +39,13 @@ scipy>=1.15.0
 matplotlib>=3.7.2
 
 # Implementation and web framework
+gradio==4.44.0
 requests>=2.32.3
 aiohttp
 pysrt
 
 # Utility section
 yt-dlp
-edge-tts>=7.2.7
 ffmpy==0.3.1
 ffmpeg-python>=0.2.0
 beautifulsoup4
@@ -60,6 +59,3 @@ onnx2torch>=1.5.15
 # Cryptography section
 pycryptodome>=3.9.6,<4.0.0
 
-# Realtime and VAD
-sounddevice>=0.5.2
-webrtcvad-wheels>=2.0.14
