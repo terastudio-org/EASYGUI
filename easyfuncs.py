@@ -25,7 +25,7 @@ except ImportError:
 class CachedModels:
     """Class to handle caching model URLs from a spreadsheet"""
     def __init__(self):
-        self.csv_url = "https://huggingface.co/NeoPy/VoiceConversion-Models/resolve/main/spreadsheet.csv"
+        self.csv_url = "https://huggingface.co/NeoPy/Ultimate-Models/resolve/main/spreadsheet.csv"
         self.cache_file = "spreadsheet.csv"
         self.models = {}
         self._load_or_download_data()
